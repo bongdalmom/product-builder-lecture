@@ -1,35 +1,39 @@
-# Project Blueprint: Lotto Number Generator
+# Lotto Number Generator - Project Blueprint
 
-## Overview
+## Project Overview
+A modern, framework-less web application that generates random lotto numbers (1-45). The app features a clean, responsive design with Web Components and CSS variables for theming.
 
-This document outlines the plan for creating a Lotto Number Generator web application. The application will feature a clean, modern interface for generating and displaying random lottery numbers.
+## Features
+- **Lotto Number Generation:** Generates 6 unique random numbers between 1 and 45.
+- **Modern UI:** Glassmorphism effect, gradients, and smooth transitions.
+- **Web Components:** Encapsulated UI elements for numbers and theme toggling.
+- **Theme Support:** Dark mode (default) and Light mode switching.
+- **Persistence:** Remembers the user's theme preference using `localStorage`.
 
-## Current Plan: Initial Setup
+## Design Specifications
+- **Typography:** System fonts (-apple-system, BlinkMacSystemFont, etc.)
+- **Colors (Dark Mode):**
+    - Background: Purple/Blue gradient
+    - Text: White
+    - Container: Semi-transparent white with blur
+- **Colors (Light Mode):**
+    - Background: Light gray/Blue gradient
+    - Text: Dark gray (#333)
+    - Container: Semi-transparent white with shadow
+- **Interactive Elements:**
+    - Generate Button: Vibrant gradient with hover/active states.
+    - Lotto Balls: Golden gradient with hover scale effect.
+    - Theme Toggle: Circular button with emoji (☀️/🌙).
 
-### 1. Project Goal
-Create a web page that generates 6 unique random numbers between 1 and 45 and displays them to the user.
+## Implementation Plan (Theme Support)
+1.  **CSS Variables:** Define `--bg-color`, `--text-color`, etc., in `:root` and `[data-theme="light"]`.
+2.  **Theme Toggle Component:** Create a `theme-toggle` Web Component that switches the `data-theme` attribute on the `<html>` element.
+3.  **Local Storage:** Save and load the `theme` key to persist user preference.
+4.  **Layout Update:** Position the theme toggle in the top-right of the container.
 
-### 2. Style and Design
-- **Layout:** A centered, card-like interface.
-- **Colors:** A vibrant color palette with gradients and shadows to create a "lifted" look.
-- **Typography:** Clear, large fonts for the generated numbers for easy readability.
-- **Interactivity:** A button with a clear "Generate" call to action and hover/active states.
-- **Visuals:** Use a subtle background texture and modern design aesthetics.
-
-### 3. Features
-- **Number Generation:** Generate 6 unique random integers from 1 to 45.
-- **Display:** Display the generated numbers in visually distinct elements.
-- **Component-Based:** Use a Web Component to encapsulate the lottery number display.
-
-### 4. Implementation Steps
-1.  **HTML (`index.html`):**
-    *   Set up the basic structure with a title, a container, a heading, a placeholder for the numbers, and a "Generate" button.
-2.  **CSS (`style.css`):**
-    *   Style the body with a background texture.
-    *   Style the main container as a centered card with a shadow.
-    *   Style the number display elements.
-    *   Style the "Generate" button with interactive effects.
-3.  **JavaScript (`main.js`):**
-    *   Create a `<lotto-numbers>` Web Component to display the numbers.
-    *   Implement the logic to generate 6 unique random numbers.
-    *   Add an event listener to the button that, when clicked, generates the numbers and updates the `<lotto-numbers>` component.
+## Progress
+- [x] Initial project setup (HTML, CSS, JS)
+- [x] Lotto number generation logic
+- [x] Web Component for numbers
+- [x] Pushed to GitHub
+- [ ] Add Dark/Light mode support (In progress)
