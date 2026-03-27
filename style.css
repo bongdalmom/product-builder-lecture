@@ -1,23 +1,23 @@
 
 :root {
-    --bg-color: #f0f2f5;
-    --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --bg-color: #e8f5e9;
+    --bg-gradient: linear-gradient(135deg, #1b5e20 0%, #4caf50 100%);
     --container-bg: rgba(255, 255, 255, 0.1);
     --text-color: white;
     --text-shadow: 0 2px 4px rgba(0,0,0,0.2);
-    --btn-bg: linear-gradient(to right, #2bc0e4 0%, #eaecc6 100%);
-    --btn-text: #333;
+    --btn-bg: linear-gradient(to right, #a5d6a7 0%, #f1f8e9 100%);
+    --btn-text: #1b5e20;
     --shadow-color: rgba(0, 0, 0, 0.2);
     --border-color: rgba(255, 255, 255, 0.2);
 }
 
 [data-theme="light"] {
-    --bg-color: #ffffff;
-    --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    --bg-color: #f1f8e9;
+    --bg-gradient: linear-gradient(135deg, #c8e6c9 0%, #a5d6a7 100%);
     --container-bg: rgba(255, 255, 255, 0.8);
-    --text-color: #333;
+    --text-color: #1b5e20;
     --text-shadow: none;
-    --btn-bg: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    --btn-bg: linear-gradient(to right, #4caf50 0%, #81c784 100%);
     --btn-text: white;
     --shadow-color: rgba(0, 0, 0, 0.1);
     --border-color: rgba(0, 0, 0, 0.1);
